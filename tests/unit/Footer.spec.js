@@ -6,8 +6,10 @@ describe('Footer', () => {
     const wrapper = mount(Footer);
     
     it('Open property changes to true', () => {
+        expect(wrapper.vm.open).toBe(false);
+
         wrapper.find('span').trigger('click');
 
-        expect(wrapper.open).toBe(true);
+        expect(wrapper.vm.open).toBe(true);
     });
 });
